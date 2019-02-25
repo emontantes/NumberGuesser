@@ -16,6 +16,10 @@ namespace NumberGuesser
             string appVersion = "1.0.0";
             //this is 2
             string appAuthor = "Esteban Montantes";
+
+            //change text color
+            Console.ForegroundColor = ConsoleColor.Green;
+
             //printing app name, version and author
             Console.WriteLine("{0}: Version {1} by {2}", appName, appVersion, appAuthor);
         } 
