@@ -11,9 +11,10 @@ namespace NumberGuesser
 
             //printing my name
             string name = "Esteban Montantes";
+            int age = 30;
 
             //Start Application Here
-            Console.WriteLine("Hello "+name);
+            Console.WriteLine(name+ " is "+age);
         }
     }
 }
