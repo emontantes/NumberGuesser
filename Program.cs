@@ -15,6 +15,7 @@ namespace NumberGuesser
 
             //Start Application Here
             Console.WriteLine(name+ " is "+age);
+            //Using Dynamic Variables
             Console.WriteLine("{0} is {1}", name, age);
         }
     }
