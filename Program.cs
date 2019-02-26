@@ -47,10 +47,23 @@ namespace NumberGuesser
             //looping to guess until the guessed number is correct
             while(guessNumber != correctNumber) {
                 //Get user guess
-                string input = Console.ReadLine();
+                string inputGuess = Console.ReadLine();
 
-            }
+                //cast to integer and put into guess variable
+                guessNumber = Int32.Parse(inputGuess);
+
+                if(guessNumber != correctNumber) {
+                    //change text color
+                    Console.ForegroundColor = ConsoleColor.Red;
+
+                    //print wrong number message
+                    Console.WriteLine("Wrong number, please try agaiin.");
+
+                    //reset text color
+                    Console.ResetColor();
+                } // if loop end
+            } //while loop end
 
         } 
-    }
+    } //main class end
 }
