@@ -44,10 +44,28 @@ namespace NumberGuesser
             //asking user for their number to guess
             Console.WriteLine("Guess a number between 1 and 10");
 
-            //looping to guess until the guessed number is correct
-            while(guessNumber != correctNumber) {
+                
+
+            //while guess is not correct
+            while (guessNumber != correctNumber) {
                 //Get user guess
                 string inputGuess = Console.ReadLine();
+
+                //Require numbers ONLY
+                if (!int.TryParse(inputGuess, out guessNumber))
+                {
+                    //notify correct number
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+
+                    //guess is correct message
+                    Console.WriteLine("Please use Real Numbers 1 through 10!");
+
+                    //reset text color
+                    Console.ResetColor();
+
+                    //throws error message BUT can still RUN
+                    continue;
+                }
 
                 //cast to integer and put into guess variable
                 guessNumber = Int32.Parse(inputGuess);
