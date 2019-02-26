@@ -30,10 +30,27 @@ namespace NumberGuesser
             Console.WriteLine("What is your name?");
 
             //get user input
-            string input = Console.ReadLine();
+            string inputName = Console.ReadLine();
 
             //greet user with input
-            Console.WriteLine("Hello {0}, get ready to guess a number!", input);
+            Console.WriteLine("Hello {0}, get ready to guess a number!", inputName);
+
+            //setting the correct number
+            int correctNumber = 7;
+
+            //setting guess variable
+            int guessNumber = 0;
+
+            //asking user for their number to guess
+            Console.WriteLine("Guess a number between 1 and 10");
+
+            //looping to guess until the guessed number is correct
+            while(guessNumber != correctNumber) {
+                //Get user guess
+                string input = Console.ReadLine();
+
+            }
+
         } 
     }
 }
