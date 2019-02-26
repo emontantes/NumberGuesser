@@ -35,19 +35,22 @@ namespace NumberGuesser
             //greet user with input
             Console.WriteLine("Hello {0}, get ready to guess a number!", inputName);
 
-            //setting the correct number
-            //int correctNumber = 7;
 
-            //Creating a new Random Object
-            Random random = new Random();
-            int correctNumber = random.Next(1, 11);
+            while (true)
+            {
+                //setting the correct number
+                //int correctNumber = 7;
 
-            //setting guess variable
-            int guessNumber = 0;
+                //Creating a new Random Object
+                Random random = new Random();
+                int correctNumber = random.Next(1, 11);
+
+                //setting guess variable
+                int guessNumber = 0;
 
 
 
-            while (true) {
+
                 //ask user for their number to guess
                 Console.WriteLine("Guess a number between 1 and 10...");
 
@@ -112,12 +115,12 @@ namespace NumberGuesser
 
                 else if (answer == "N")
                 {
-                    return;
+                    break;
                 }
 
                 else
                 {
-                    return;
+                    break;
                 }
             } // while true end
 
