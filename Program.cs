@@ -40,14 +40,8 @@ namespace NumberGuesser
                     //Require numbers ONLY from user input
                     if (!int.TryParse(inputGuess, out guessNumber))
                     {
-                        //notify correct number
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-
-                        //guess is correct message
-                        Console.WriteLine("Please use real numbers 1 through 10!");
-
-                        //reset text color
-                        Console.ResetColor();
+                        // print error message 
+                        PrintColorMessage(ConsoleColor.Yellow, "Please use real numbers 1 through 10!");
 
                         //throws error message BUT can still RUN
                         continue;
@@ -133,7 +127,18 @@ namespace NumberGuesser
             //greet user with input
             Console.WriteLine("Hello {0}, get ready to guess a number!", inputName);
         }
+        // print color message
+        static void PrintColorMessage(ConsoleColor color, string message)  {
+            //notify correct number
+            Console.ForegroundColor = color;
 
+            //tell user too use numbers
+            Console.WriteLine(message);
+
+            //reset text color
+            Console.ResetColor();
+        }
 
     } //main class end
 }
+
