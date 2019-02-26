@@ -52,6 +52,7 @@ namespace NumberGuesser
                 //cast to integer and put into guess variable
                 guessNumber = Int32.Parse(inputGuess);
 
+                //notify wrong number
                 if(guessNumber != correctNumber) {
                     //change text color
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -64,6 +65,14 @@ namespace NumberGuesser
                 } // if loop end
             } //while loop end
 
+            //notify correct number
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            //guess is correct message
+            Console.WriteLine("Beautiful number, that's correct!");
+
+            //reset text color
+            Console.ResetColor();
         } 
     } //main class end
 }
