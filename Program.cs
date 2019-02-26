@@ -33,7 +33,7 @@ namespace NumberGuesser
             string input = Console.ReadLine();
 
             //greet user with input
-            Console.WriteLine("Hello {0}, get ready to guess a number!");
+            Console.WriteLine("Hello {0}, get ready to guess a number!", input);
         } 
     }
 }
