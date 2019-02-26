@@ -40,7 +40,7 @@ namespace NumberGuesser
                     //Require numbers ONLY from user input
                     if (!int.TryParse(inputGuess, out guessNumber))
                     {
-                        // print error message 
+                        // print input error message 
                         PrintColorMessage(ConsoleColor.Yellow, "Please use real numbers 1 through 10!");
 
                         //throws error message BUT can still RUN
@@ -53,25 +53,16 @@ namespace NumberGuesser
                     //notify wrong number
                     if (guessNumber != correctNumber)
                     {
-                        //change text color
-                        Console.ForegroundColor = ConsoleColor.Red;
 
-                        //print wrong number message
-                        Console.WriteLine("Wrong number, please try agaiin.");
+                        // print wroong number message 
+                        PrintColorMessage(ConsoleColor.Red, "Wrong number, please try agaiin.");
 
-                        //reset text color
-                        Console.ResetColor();
                     } // if loop end
                 } //wrong guess loop end
 
-                //notify correct number
-                Console.ForegroundColor = ConsoleColor.Green;
+                // print right message 
+                PrintColorMessage(ConsoleColor.Green, "Beautiful number, that's correct!");
 
-                //guess is correct message
-                Console.WriteLine("Beautiful number, that's correct!");
-
-                //reset text color
-                Console.ResetColor();
 
                 // ask to play again
                 Console.WriteLine("Play Again? [Y or N]");
