@@ -8,32 +8,9 @@ namespace NumberGuesser
         //Entry Point Method
         public static void Main(string[] args)
         {
-            //heading for version and author name
-            //set app variables
-            //this is 0
-            string appName = "Number Guesser";
-            //this is 1
-            string appVersion = "1.0.0";
-            //this is 2
-            string appAuthor = "Esteban Montantes";
+            GetAppInfo(); //run getappinfo function below
 
-            //change text color
-            Console.ForegroundColor = ConsoleColor.Green;
-
-            //printing app name, version and author
-            Console.WriteLine("{0}: Version {1} by {2}", appName, appVersion, appAuthor);
-
-            //reset console color after name and version is printed to screen
-            Console.ResetColor();
-
-            //Ask User for name
-            Console.WriteLine("What is your name?");
-
-            //get user input
-            string inputName = Console.ReadLine();
-
-            //greet user with input
-            Console.WriteLine("Hello {0}, get ready to guess a number!", inputName);
+            GreetUser(); 
 
 
             while (true)
@@ -124,6 +101,39 @@ namespace NumberGuesser
                 }
             } // while true end
 
-        } 
+        }
+
+        static void GetAppInfo() {
+            //heading for version and author name
+            //set app variables
+            //this is 0
+            string appName = "Number Guesser";
+            //this is 1
+            string appVersion = "1.0.0";
+            //this is 2
+            string appAuthor = "Esteban Montantes";
+
+            //change text color
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            //printing app name, version and author
+            Console.WriteLine("{0}: Version {1} by {2}", appName, appVersion, appAuthor);
+
+            //reset console color after name and version is printed to screen
+            Console.ResetColor();
+        }
+
+        static void GreetUser()  {
+            //Ask User for name
+            Console.WriteLine("What is your name?");
+
+            //get user input
+            string inputName = Console.ReadLine();
+
+            //greet user with input
+            Console.WriteLine("Hello {0}, get ready to guess a number!", inputName);
+        }
+
+
     } //main class end
 }
