@@ -22,6 +22,18 @@ namespace NumberGuesser
 
             //printing app name, version and author
             Console.WriteLine("{0}: Version {1} by {2}", appName, appVersion, appAuthor);
+
+            //reset console color after name and version is printed to screen
+            Console.ResetColor();
+
+            //Ask User for name
+            Console.WriteLine("What is your name?");
+
+            //get user input
+            string input = Console.ReadLine();
+
+            //greet user with input
+            Console.WriteLine("Hello {0}, get ready to guess a number!");
         } 
     }
 }
