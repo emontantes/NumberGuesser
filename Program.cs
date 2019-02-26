@@ -36,7 +36,11 @@ namespace NumberGuesser
             Console.WriteLine("Hello {0}, get ready to guess a number!", inputName);
 
             //setting the correct number
-            int correctNumber = 7;
+            //int correctNumber = 7;
+
+            //Creating a new Random Object
+            Random random = new Random();
+            int correctNumber = random.Next(1, 11);
 
             //setting guess variable
             int guessNumber = 0;
@@ -51,14 +55,14 @@ namespace NumberGuesser
                 //Get user guess
                 string inputGuess = Console.ReadLine();
 
-                //Require numbers ONLY
+                //Require numbers ONLY from user input
                 if (!int.TryParse(inputGuess, out guessNumber))
                 {
                     //notify correct number
                     Console.ForegroundColor = ConsoleColor.Yellow;
 
                     //guess is correct message
-                    Console.WriteLine("Please use Real Numbers 1 through 10!");
+                    Console.WriteLine("Please use real numbers 1 through 10!");
 
                     //reset text color
                     Console.ResetColor();
